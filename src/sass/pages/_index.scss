@@ -1,1 +1,12 @@
-// Index for $folder
+// Index
+
+@use '../abstracts' as a;
+
+.container {
+  max-width: a.rem(a.$section-base);
+  padding-inline: a.rem(a.$spacing-base);
+}
+
+section {
+  padding: a.rem(a.$spacing-base) 0;
+}
