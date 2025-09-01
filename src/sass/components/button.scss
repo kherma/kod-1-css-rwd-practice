@@ -2,12 +2,13 @@
 
 .btn {
   display: inline-block;
-  max-width: 160px;
-  margin: 24px auto 0 auto;
-  padding: 16px;
-  border-radius: 5px;
+  max-width: a.rem(160);
+  width: 100%;
+  margin: a.rem(24) auto 0 auto;
+  padding: a.rem(16);
+  border-radius: a.rem(5);
   font-family: a.$font-primary;
-  font-size: 16px;
+  font-size: a.rem(16);
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -37,7 +38,8 @@
   &--five {
     @include a.btn-style(a.$blue-primary, a.$light);
     border: none;
-    padding: 0;
+    padding: 0.5rem;
     border-radius: 0;
+    width: auto;
   }
 }

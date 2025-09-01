@@ -1,0 +1,64 @@
+@use '../abstracts' as a;
+
+.contact-us {
+  background-color: a.$blue-primary;
+  color: a.$light;
+
+  &__inner {
+    display: flex;
+    flex-flow: row wrap;
+    gap: a.rem(a.$spacing-base);
+  }
+
+  &__form {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 2 0 0;
+    gap: a.rem(24);
+  }
+
+  &__input,
+  &__textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: a.rem(5) solid white;
+    padding: a.rem(16);
+
+    &:focus {
+      outline-color: a.$green-primary;
+    }
+
+    &::placeholder {
+      color: a.$light;
+      font-family: inherit;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    min-height: a.rem(250);
+  }
+
+  &__info {
+    flex: 1 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: a.rem(20);
+
+    &-group {
+    }
+
+    &-heading {
+      font-size: a.rem(24);
+    }
+
+    &-address {
+    }
+  }
+
+  button {
+    background-color: transparent;
+    margin-top: a.rem(36);
+    margin-inline: 0;
+  }
+}
