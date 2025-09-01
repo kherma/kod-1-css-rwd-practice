@@ -1,0 +1,32 @@
+@use '../abstracts' as a;
+
+.header {
+  min-height: a.rem(a.$hader-base);
+  background-color: a.$blue-primary;
+  color: a.$light;
+  display: grid;
+  place-items: center;
+
+  &__inner {
+    max-width: 70%;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: a.rem(72);
+    word-spacing: a.rem(-24);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin: a.rem(24) 0;
+    font-size: a.rem(16);
+    font-weight: 400;
+  }
+}
+
+.title-accent {
+  font-family: a.$font-secondary;
+  font-weight: 900;
+}
