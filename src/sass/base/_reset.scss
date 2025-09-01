@@ -19,6 +19,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0;
   font-size: a.rem(a.$font-size-base);
+  color: a.$dark;
 }
 
 img {
@@ -48,4 +49,13 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
