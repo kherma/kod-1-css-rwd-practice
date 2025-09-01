@@ -1,0 +1,44 @@
+@use '../abstracts' as a;
+
+.our-work {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-content: center;
+    row-gap: a.rem(a.$spacing-base);
+
+    &-item {
+      display: flex;
+      align-items: center;
+      flex: 0 0 50%;
+      min-height: a.rem(a.$our-work-item-height);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &-container {
+      max-width: a.rem(a.$our-work-img);
+      width: 100%;
+      align-self: stretch;
+    }
+  }
+
+  &__text {
+    padding: 0 a.rem(42);
+
+    &-title {
+      font-size: a.rem(24);
+      margin-bottom: a.rem(12);
+      position: relative;
+    }
+
+    p:last-of-type {
+      font-weight: bold;
+    }
+  }
+}
