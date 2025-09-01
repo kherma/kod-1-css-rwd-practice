@@ -1,0 +1,25 @@
+@use '../abstracts' as a;
+
+.navbar {
+  background-color: a.$blue-primary;
+  padding: a.rem(12) 0;
+
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: a.rem(a.$spacing-sm);
+
+    &-item {
+    }
+    &-link {
+      color: a.$light;
+      transition: color 0.15s;
+
+      &:hover {
+        color: a.$green-primary;
+      }
+    }
+  }
+}
