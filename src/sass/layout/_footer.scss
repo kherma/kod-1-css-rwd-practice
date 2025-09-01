@@ -1,0 +1,31 @@
+@use '../abstracts' as a;
+
+.footer {
+  padding: a.rem(48) 0;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: a.rem(20);
+
+    &-item {
+      font-size: 0;
+    }
+
+    &-link {
+      width: a.rem(60);
+      height: a.rem(60);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: a.$light;
+      background-color: a.$red-primary;
+    }
+  }
+
+  &__icon {
+    font-size: a.rem(30);
+  }
+}
