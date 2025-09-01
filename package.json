@@ -19,7 +19,7 @@
     "build:sass": "sass --no-source-map src/sass:public/css",
     "build:copy:html": "copyfiles -u 1 src/*.html public",
     "build:copy:js": "copyfiles -u 1 src/js/**/* public/js",
-    "build:copy:assets": "copyfiles -u 1 src/assets/**/* public/assets",
+    "build:copy:assets": "copyfiles -u 1 src/assets/**/* public",
     "build:copy": "npm-run-all build:copy:*",
     "postcss": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
     "build": "npm-run-all clean build:sass build:copy postcss",
