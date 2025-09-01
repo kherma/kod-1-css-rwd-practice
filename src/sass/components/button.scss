@@ -1,0 +1,43 @@
+@use '../abstracts' as a;
+
+.btn {
+  display: inline-block;
+  max-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-family: a.$font-primary;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-position: 100% 0;
+  background-size: 300%;
+
+  &:hover {
+    background-position: 0 100%;
+  }
+
+  &--one {
+    @include a.btn-style(a.$light, a.$blue-primary);
+  }
+
+  &--two {
+    @include a.btn-style(a.$green-primary, a.$light);
+  }
+
+  &--three {
+    @include a.btn-style(a.$red-primary, a.$light);
+  }
+
+  &--four {
+    @include a.btn-style(a.$blue-primary, a.$light);
+  }
+
+  &--five {
+    @include a.btn-style(a.$blue-primary, a.$light);
+    border: none;
+    padding: 0;
+    border-radius: 0;
+  }
+}
