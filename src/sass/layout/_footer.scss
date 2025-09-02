@@ -3,6 +3,10 @@
 .footer {
   padding: a.rem(48) 0;
 
+  @include a.breakpoint(medium) {
+    padding: a.rem(a.$spacing-sm) 0;
+  }
+
   &__list {
     display: flex;
     justify-content: center;

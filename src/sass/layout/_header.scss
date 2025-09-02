@@ -7,8 +7,16 @@
   display: grid;
   place-items: center;
 
+  @include a.breakpoint(small) {
+    min-height: 100svh;
+  }
+
   &__inner {
     max-width: 70%;
+
+    @include a.breakpoint(small) {
+      max-width: 90%;
+    }
   }
 
   &__title {
@@ -17,6 +25,10 @@
     word-spacing: a.rem(-24);
     line-height: 1.2;
     font-weight: 700;
+
+    @include a.breakpoint(small) {
+      font-size: a.rem(65);
+    }
   }
 
   &__subtitle {

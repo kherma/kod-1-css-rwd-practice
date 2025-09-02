@@ -7,8 +7,17 @@
     justify-content: space-between;
     gap: a.rem(20);
 
+    @include a.breakpoint(small) {
+      padding-inline: a.rem(36);
+      gap: a.rem(72);
+    }
+
     &-item {
       flex: 1 1 0;
+
+      @include a.breakpoint(small) {
+        flex-basis: 100%;
+      }
 
       &:nth-child(1) .services__list-title::after {
         content: '1';

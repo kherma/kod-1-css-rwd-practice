@@ -1,4 +1,7 @@
 // Mixins
+@use 'sass:map';
+@use 'functions' as f;
+
 @mixin btn-style($bg, $text) {
   border-style: solid;
   border: 2px solid $bg;
@@ -16,5 +19,38 @@
 
   &:hover {
     color: $text;
+  }
+}
+
+$breakpoints: (
+  'small': (
+    'max': f.em(767),
+  ),
+  'medium': (
+    'min': f.em(768),
+    'max': f.em(911),
+  ),
+  'large': (
+    'min': f.em(912),
+  ),
+);
+
+@mixin breakpoint($size) {
+  $bp: map.get($breakpoints, $size);
+
+  @if map.has-key($bp, 'max') and map.has-key($bp, 'min') {
+    @media (min-width: map.get($bp, 'min')) and (max-width: map.get($bp, 'max')) {
+      @content;
+    }
+  } @else if map.has-key($bp, 'max') {
+    @media (max-width: map.get($bp, 'max')) {
+      @content;
+    }
+  } @else if map.has-key($bp, 'min') {
+    @media (min-width: map.get($bp, 'min')) {
+      @content;
+    }
+  } @else {
+    @warn "No valid min/max for `#{$size}` breakpoint.";
   }
 }

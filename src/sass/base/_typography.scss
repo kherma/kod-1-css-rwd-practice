@@ -4,4 +4,8 @@
 .section-title {
   font-size: a.rem(48);
   margin-bottom: a.rem(72);
+
+  @include a.breakpoint(small) {
+    font-size: a.rem(32);
+  }
 }
