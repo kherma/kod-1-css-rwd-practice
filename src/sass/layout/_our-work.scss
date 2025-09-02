@@ -14,6 +14,11 @@
       flex: 0 0 50%;
       min-height: a.rem(a.$our-work-item-height);
 
+      @include a.breakpoint(small) {
+        flex-direction: column;
+        flex-basis: 100%;
+      }
+
       &:hover > ::after {
         transform: translate(0, 0);
       }
@@ -31,6 +36,16 @@
       width: 100%;
       align-self: stretch;
 
+      @include a.breakpoint(medium) {
+        max-width: 100%;
+        height: a.rem(150);
+      }
+
+      @include a.breakpoint(small) {
+        max-width: 100%;
+        height: a.rem(180);
+      }
+
       &::after {
         content: '';
         position: absolute;
@@ -41,7 +56,7 @@
         z-index: 10000;
         top: 0;
         left: 0;
-        transform: translate(10%, 10%);
+        transform: translate(a.rem(30), a.rem(30));
         transition: transform 0.5s;
       }
     }
@@ -49,6 +64,11 @@
 
   &__text {
     padding: 0 a.rem(42);
+
+    @include a.breakpoint(small) {
+      padding: 0;
+      margin-top: a.rem(56);
+    }
 
     &-title {
       font-size: a.rem(24);

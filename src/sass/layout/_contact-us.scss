@@ -4,6 +4,10 @@
   background-color: a.$blue-primary;
   color: a.$light;
 
+  @include a.breakpoint(small) {
+    padding-bottom: a.rem(16);
+  }
+
   &__inner {
     display: flex;
     flex-flow: row wrap;
@@ -13,7 +17,7 @@
   &__form {
     display: flex;
     flex-flow: column nowrap;
-    flex: 2 0 0;
+    flex: 2 0 a.rem(320);
     gap: a.rem(24);
   }
 
@@ -37,6 +41,10 @@
   &__textarea {
     resize: none;
     min-height: a.rem(250);
+
+    @include a.breakpoint(small) {
+      min-height: a.rem(180);
+    }
   }
 
   &__info {

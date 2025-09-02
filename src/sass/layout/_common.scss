@@ -4,8 +4,20 @@
   margin-inline: auto;
   max-width: a.rem(a.$section-base);
   padding-inline: a.rem(a.$spacing-sm);
+
+  @include a.breakpoint(small) {
+    padding-inline: a.rem(12);
+  }
 }
 
 section {
   padding: a.rem(a.$spacing-base) 0;
+
+  @include a.breakpoint(medium) {
+    padding: a.rem(a.$spacing-sm) 0;
+  }
+
+  @include a.breakpoint(small) {
+    padding-inline: a.rem(24);
+  }
 }

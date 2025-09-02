@@ -11,6 +11,11 @@
     justify-content: flex-start;
     gap: a.rem(a.$spacing-sm);
 
+    @include a.breakpoint(small) {
+      gap: a.rem(20);
+      justify-content: center;
+    }
+
     &-item {
       position: relative;
 
